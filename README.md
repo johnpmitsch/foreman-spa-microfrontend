@@ -9,11 +9,11 @@ Applications must be installed and started separately (the workflow itself will 
 For root-config, foreman-chroming, foreman-core, katello:
 
 - cd to the directory and `npm i`
-- In separate terminal tabs, `npm start` in the applications directory
+- In separate terminal tabs, `npm start` in the application's directory
 - Navigate to `https://localhost:9000`
 - Test out a Foreman route such as `https://localhost:9000/hosts` or a Katello one such as `https://localhost:9000/content_views`
 
-You must run root-config and chroming, but can only run katello or foreman-core application as long as you navigate to the running applications routes. For example, if I was working on Katello by itself, I can start root-config, foreman-chroming, and Katello and then navigate to `/content_views`. This will be the smae for additional plugins.
+You must run root-config and chroming, but can only run katello or foreman-core application as long as you navigate to the running applications routes. For example, if I was working on Katello by itself, I can start root-config, foreman-chroming, and Katello and then navigate to `/content_views`. This will be the same for additional plugins.
 
 ## Applications
 

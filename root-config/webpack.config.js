@@ -3,11 +3,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = env => ({
-  entry: path.resolve(__dirname, "src/foreman-root-config"),
+  entry: {
+    "foreman-root-config": "foreman-root-config.js"
+  },
   output: {
-    filename: "foreman-root-config.js",
-    libraryTarget: "system",
-    path: path.resolve(__dirname, "dist")
+    publicPath: "/",
+    filename: "[name].js"
   },
   devtool: "sourcemap",
   module: {
@@ -27,15 +28,20 @@ module.exports = env => ({
       "Access-Control-Allow-Origin": "*"
     }
   },
+  node: {
+    fs: "empty"
+  },
+  resolve: {
+    modules: [__dirname, "node_modules"]
+  },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: false,
-      template: "src/index.ejs",
-      templateParameters: {
-        isLocal: env && env.isLocal
-      }
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ["dist"]
     }),
-    new CleanWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "index.html"),
+      inject: false
+    })
   ],
-  externals: ["single-spa", /^@foreman\/.+$/]
+  externals: []
 });

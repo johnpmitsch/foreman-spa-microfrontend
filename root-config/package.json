@@ -1,10 +1,15 @@
 {
+  "name": "foreman-ui-root-config",
+  "description": "Single-spa application that manages routing and configuration for multiple applications for the Foreman UI",
+  "main": "src/foreman-root-config.js",
   "scripts": {
     "start": "webpack-dev-server --mode=development --port 9000 --env.isLocal=true --https",
-    "lint": "eslint src",
+    "lint": "eslint . --ext .js",
     "test": "jest",
     "build": "webpack --mode=production"
   },
+  "author": "John Mitsch",
+  "license": "MIT",
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged && eslint src"
@@ -32,6 +37,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "single-spa": "^4.4.2"
+    "single-spa": "^4.4.2",
+    "foreman-test-ui-chroming": "file:../foreman-chroming"
   }
 }

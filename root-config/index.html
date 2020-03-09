@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Foreman UI with multiple SPAs</title>
+  </head>
+  <style>
+    html,
+    body {
+      padding-top: 5px;
+      height: 90%;
+    }
+
+    #container {
+      display: "inline-block";
+      height: 100%;
+    }
+
+    #foreman-chroming {
+      width: 200px;
+      height: 100%;
+      float: left;
+    }
+
+    #main-content {
+      position: relative;
+      width: 300px;
+    }
+  </style>
+  <body>
+    <script src="/foreman-root-config.js"></script>
+    <div id="container">
+      <div id="foreman-chroming"></div>
+      <div id="foreman-main-content"></div>
+    </div>
+  </body>
+</html>
