@@ -1,4 +1,8 @@
 {
+  "name": "foreman-test-ui-core",
+  "version": "0.0.1",
+  "description": "React application providing core pages for the Foreman UI",
+  "main": "dist/foreman-core.js",
   "scripts": {
     "start": "webpack-dev-server --port 9002",
     "build": "webpack --mode=production",
@@ -8,11 +12,6 @@
     "test": "jest --passWithNoTests",
     "watch-tests": "jest --watch",
     "coverage": "jest --coverage"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && concurrently npm:test npm:lint"
-    }
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
@@ -29,12 +28,10 @@
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-react-important-stuff": "^2.0.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "husky": "^3.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
     "prettier": "^1.19.1",
-    "pretty-quick": "^2.0.1",
     "single-spa-react": "^2.10.4",
     "style-loader": "^1.0.1",
     "systemjs-webpack-interop": "^1.1.2",
@@ -45,7 +42,10 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.3.1",
+    "single-spa-react": "2.11.0"
   }
 }

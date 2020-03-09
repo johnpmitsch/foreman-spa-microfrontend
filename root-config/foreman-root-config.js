@@ -9,12 +9,12 @@ registerApplication(
   location => location.pathname.startsWith("/")
 );
 
-//registerApplication(
-//  "foreman-core",
-//  () => import("foreman-test-ui-core"),
-//  location => FOREMAN_PAGES.includes(location.pathname)
-//);
-//
+registerApplication(
+  "foreman-core",
+  () => import("foreman-test-ui-core"),
+  location => FOREMAN_PAGES.includes(location.pathname)
+);
+
 //registerApplication(
 //  "foreman-katello",
 //  () => import("foreman-test-ui-katello"),

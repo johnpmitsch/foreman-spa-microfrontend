@@ -10,11 +10,6 @@
   },
   "author": "John Mitsch",
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && eslint src"
-    }
-  },
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
@@ -26,11 +21,9 @@
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
     "html-webpack-plugin": "^3.2.0",
-    "husky": "^3.1.0",
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
     "prettier": "^1.19.1",
-    "pretty-quick": "^2.0.1",
     "serve": "^11.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
@@ -38,6 +31,7 @@
   },
   "dependencies": {
     "single-spa": "^4.4.2",
-    "foreman-test-ui-chroming": "file:../foreman-chroming"
+    "foreman-test-ui-chroming": "file:../foreman-chroming",
+    "foreman-test-ui-core": "file:../foreman-core"
   }
 }

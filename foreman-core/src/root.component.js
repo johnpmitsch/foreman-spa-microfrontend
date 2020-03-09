@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function Root(props) {
-  return (
-    <section>A Foreman core page!</section>
-  )
+  return <section>A Foreman core page!</section>;
 }
