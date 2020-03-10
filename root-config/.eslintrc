@@ -3,14 +3,13 @@
   "env": {
     "node": true
   },
-  "extends": [
-    "important-stuff",
-    "plugin:prettier/recommended" 
-  ],
-  "parser": "",
+  "extends": ["eslint:recommended", "airbnb-base"],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
-    "allowImportExportEverywhere": true
+    "allowImportExportEverywhere": true,
+    "requireConfigFile": false,
+    "import/no-dynamic-require": false
   }
 }
 

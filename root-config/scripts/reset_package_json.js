@@ -1,7 +1,8 @@
 // Restore package.json back to it's original state wihtout plugins
+/* eslint-disable no-console */
 
-const fs = require('fs')
-const paths = require('./paths')
+const fs = require('fs');
+const paths = require('./paths');
 
 fs.copyFile(paths.pkgJsonBackupPath, paths.pkgJsonPath, (err) => {
   if (err) throw err;
@@ -11,4 +12,6 @@ fs.copyFile(paths.pkgJsonBackupPath, paths.pkgJsonPath, (err) => {
 fs.unlink(paths.pkgJsonBackupPath, (err) => {
   if (err) throw err;
   console.log(`${paths.pkgJsonBackupPath} was removed`);
-})
+});
+
+/* eslint-enable no-console */
