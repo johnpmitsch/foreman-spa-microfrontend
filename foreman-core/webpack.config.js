@@ -42,7 +42,14 @@ module.exports = {
     })
   ],
   devtool: "source-map",
-  externals: [],
+  // These packages are expected to be in foreman-chroming
+  externals: [
+    "react",
+    "react-dom",
+    "react-router-dom",
+    "react-scripts",
+    "single-spa-react"
+  ],
   devServer: {
     historyApiFallback: true,
     writeToDisk: true
