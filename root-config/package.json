@@ -32,6 +32,7 @@
   "dependencies": {
     "single-spa": "^4.4.2",
     "foreman-test-ui-chroming": "file:../foreman-chroming",
-    "foreman-test-ui-core": "file:../foreman-core"
+    "foreman-test-ui-core": "file:../foreman-core",
+    "foreman-test-ui-katello": "file:../katello"
   }
 }

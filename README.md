@@ -9,7 +9,10 @@ Applications must be installed and started separately (the workflow itself will 
 For root-config, foreman-chroming, foreman-core, katello:
 
 - cd to the directory and `npm i`
-- In separate terminal tabs, `npm start` in the application's directory
+- In every application but the `root-config`, `npm run build` in the application's directory
+
+Then:
+- Run `npm start` in `root-config`
 - Navigate to `https://localhost:9000`
 - Test out a Foreman route such as `https://localhost:9000/hosts` or a Katello one such as `https://localhost:9000/content_views`
 

@@ -15,10 +15,10 @@ registerApplication(
   location => FOREMAN_PAGES.includes(location.pathname)
 );
 
-//registerApplication(
-//  "foreman-katello",
-//  () => import("foreman-test-ui-katello"),
-//  location => KATELLO_PAGES.includes(location.pathname)
-//);
+registerApplication(
+  "foreman-katello",
+  () => import("foreman-test-ui-katello"),
+  location => KATELLO_PAGES.includes(location.pathname)
+);
 
 start();
