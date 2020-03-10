@@ -3,7 +3,7 @@
   "description": "Single-spa application that manages routing and configuration for multiple applications for the Foreman UI",
   "main": "src/foreman-root-config.js",
   "scripts": {
-    "preinstall": "node ./scripts/update_with_plugins.js",
+    "preinstall": "node ./scripts/build_environment_variables && node ./scripts/update_with_plugins.js",
     "postinstall": "node ./scripts/reset_package_json.js",
     "start": "webpack-dev-server --mode=development --port 9000 --env.isLocal=true --https",
     "lint": "eslint . --ext .js",
@@ -19,6 +19,8 @@
     "babel-eslint": "^11.0.0-beta.2",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-loader": "^3.0.3",

@@ -1,6 +1,7 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = env => ({
   entry: {
@@ -41,7 +42,8 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "index.html"),
       inject: false
-    })
+    }),
+    new Dotenv() // loads environment from .env
   ],
   externals: []
 });

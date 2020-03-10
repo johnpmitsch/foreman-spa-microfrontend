@@ -1,0 +1,19 @@
+/**
+ Add plugins in the same format they would be included in package.json.
+ For example:
+ "foo-plugin": "latest" would use the latest package from npm registry
+ "foo-plugin": "3.0.1" would use 3.0.1 package from npm registry
+ "foo-plugin": "~3.0.0" would use the latest patch version (3.0.z)
+ "foo-plugin": "^3.0.0" would use the latest minor version (3.y.z)
+ "foo-plugin": "file:../foo-plugin" would use a local copy of foo-plugin
+                located at ../foo-plugin relative to the package.json file
+
+  See https://docs.npmjs.com/about-semantic-versioning for more info
+ * */
+
+const plugins = {
+  'foreman-test-ui-core': 'file:../foreman-core',
+  'foreman-test-ui-katello': 'file:../katello',
+};
+
+module.exports = plugins;
