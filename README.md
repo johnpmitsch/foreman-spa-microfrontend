@@ -4,12 +4,13 @@ This repo contains multiple Single-Page-Applications (SPA) that work together wi
 
 ## Getting Started
 
-Applications must be installed and started separately (the workflow itself will likely be improved)
+Applications must be built if they are local. These can be used from the npm registry as well, but as of this writing they are not published.
 
-For root-config, foreman-chroming, foreman-core, katello:
+For root-config:
 
-- cd to the directory and `npm i`
 - In every application but the `root-config`, `npm run build` in the application's directory
+- In root config, `cp plugings.js.example plugins.js`
+- cd to `root-config` and `npm i`
 
 Then:
 - Run `npm start` in `root-config`
